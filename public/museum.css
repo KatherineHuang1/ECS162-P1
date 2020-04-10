@@ -1,0 +1,201 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+
+/* 1. very top of the web */
+.top {
+  font-size: small;
+  /* justify-self: space-between; */
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* align-items: flex-start; */
+}
+/* top left */
+.full-name {
+  color: #2a2d7c;
+}
+.museum-name {
+  color: #c9523d;
+}
+/* top right */
+.tabs a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* 2. heart beat counter? */
+.counter {
+  /* display: flex; */
+  background-color: #000000;
+  color: #f2f2f2;
+  font-size: 400%;
+  padding: 50px;
+  /* margin: 0px; */
+  /* border: 0px; */
+  text-align: center;
+}
+
+/* 3. title of the paragraph */
+header {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+h1 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 150%;
+}
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 100%;
+}
+
+/* 4. images and paragraphs */
+.photos,
+main {
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
+/* 5. footer */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-family: "Montserrat", sans-serif;
+  background-color: #c6d2da;
+  font-size: 100;
+}
+.box > h3 {
+  font-weight: bold;
+}
+
+.box {
+  /* text-align: left; */
+  margin: 5px;
+  padding: 10px;
+}
+
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
