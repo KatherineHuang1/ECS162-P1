@@ -80,25 +80,20 @@ h2 {
   display: none;
 }
 .slide img {
+  position: relative;
   width: 60%;
 }
 .caption {
   /* layout */
-
-  /* padding: 8px 12px; */
-  /* bottom: 8px; */
-
-  position: absolute;
+  position: relative;
   left: 24%;
-  top: 100%;
+  top: -50px;
   width: 50%; /*shorter than img*/
   padding: 10px;
-  text-align: center;
 
   /* style */
   font-family: "Open Sans", sans-serif;
   color: red;
-  background-color: aqua;
   /* color: #f2f2f2; */
   font-size: 60%;
   font-weight: 400;
@@ -166,7 +161,7 @@ main p {
   /* layout */
   display: block;
   margin: auto;
-  width: 55%;
+  width: 50%;
   padding: 10px;
 }
 
