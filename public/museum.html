@@ -14,13 +14,14 @@
     <!-- import the webpage's css -->
     <!--CSS: font-family: 'Montserrat', sans-serif;-->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;800&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400&family=Open+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="museum.css" />
   </head>
 
@@ -34,9 +35,9 @@
       </div>
 
       <div class="tabs">
-        <a href="#" class="href">home</a>
-        <a href="#" class="href">visit</a>
-        <a href="#" class="href">about</a>
+        <a href="#" class="href"> home </a>
+        <a href="#" class="href"> visit </a>
+        <a href="#" class="href"> about </a>
       </div>
     </div>
 
@@ -50,16 +51,57 @@
       <h2>On view January 26-May 10, 2020</h2>
     </header>
 
-    <!-- TODO: add more images and text within images, button, right left-->
-    <div>
-      <img
-        class="photos"
-        src="../assets/fabric.jpg"
-        alt="fabric image unavailable"
-      />
-    </div>
-
     <main>
+      <!-- cite: W3 school -->
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="../assets/fabric.jpg" />
+          <div class="position">1 / 4</div>
+          <div class="caption">
+            Stephan Kaltenbach and guests, MODERN DRAPERY, 2020. Felt Frbric, 45
+            x 60 inches.
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="../assets/fatherPortrait.jpg" />
+          <div class="position">2 / 4</div>
+          <div class="caption">
+            Stephan Kaltenbach, Portrait of My Father, 1972-79. Acrylic on
+            canvas, 114 x 170 3/4 inches
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="../assets/roomCube.jpg" />
+          <div class="position">3 / 4</div>
+          <div class="caption">
+            Stephan Kaltenbach, Room Cube, 1967. Blueprint, 18 x 24 inches,
+            edition of 10.
+          </div>
+        </div>
+
+        <div class="slide">
+          <img src="../assets/openAfterDeath.jpg" />
+          <div class="position">4 / 4</div>
+          <div class="caption">
+            Stephan Kaltenbach, OPEN AFTER MY DEATH, 1970. Mild steel, engraved,
+            with unknown contents, 3 x 6 x 3 inches.
+          </div>
+        </div>
+
+        <!-- Next and previous image button -->
+        <div id="prev"> &#10094 </div>
+        <div id="next"> &#10095 </div>
+      </div>
+
+      <div class="navigator">
+        <span class="dot" id="dot1"></span>
+        <span class="dot" id="dot2"></span>
+        <span class="dot" id="dot3"></span>
+        <span class="dot" id="dot4"></span>
+      </div>
+
       <p>
         During the late 1960s, after graduating from UC Davis (BA, 1966; MA,
         1967) and moving to New York, Stephen Kaltenbach established a
@@ -73,7 +115,6 @@
         advertisements placed anonymously in Artforum magazine in 1968-69, and
         the monumental photorealist painting Portrait of My Father (1972-79)
       </p>
-      <br />
       <p>Guest Curators: Constance Lewallen and Ted Mann</p>
     </main>
 
@@ -116,6 +157,6 @@
 
     <!-- import the webpage's browser-side javascript file -->
     <!-- Does not do anything yet -->
-    <script src="./script.js"></script>
+    <script src="museum.js"></script>
   </body>
 </html>

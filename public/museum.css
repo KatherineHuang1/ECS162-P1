@@ -1,78 +1,13 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-
 /* 1. very top of the web */
 .top {
-  font-size: small;
-  /* justify-self: space-between; */
-  /* display: flex; */
-  /* flex-direction: row; */
-  /* align-items: flex-start; */
+  /* layout */
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+
+  /* style */
+  font-family: "Montserrat", sans-serif;
+  font-size: 70%;
 }
 /* top left */
 .full-name {
@@ -82,51 +17,160 @@ footer,
   color: #c9523d;
 }
 /* top right */
-.tabs a {
-  color: #000000;
-  text-decoration: none;
+.tabs {
+  /* layout */
+  display: flex;
+  flex-direction: row;
 }
 
-/* 2. heart beat counter? */
+.tabs a {
+  /* style */
+  color: #000000;
+  /* layout: space between tabs */
+  margin: 5px;
+}
+
+/* 2. TODO: heart beat counter? */
 .counter {
-  /* display: flex; */
+  /* layout */
+  /* TODO: display: flex; */
+  margin: auto;
+  text-align: center;
+  padding: 50px;
+
+  /* style */
   background-color: #000000;
   color: #f2f2f2;
   font-size: 400%;
-  padding: 50px;
-  /* margin: 0px; */
-  /* border: 0px; */
-  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }
 
 /* 3. title of the paragraph */
 header {
-  font-family: "Montserrat", sans-serif;
+  /* layout */
   text-align: center;
+  padding: 20px;
+  /* style */
+  font-family: "Open Sans", sans-serif;
 }
 h1 {
-  margin-left: auto;
-  margin-right: auto;
+  /* layout */
+  padding: 20px;
+  /* style */
+  font-weight: 600;
   font-size: 150%;
 }
 h2 {
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 100%;
+  /* style */
+  font-size: 120%;
+  font-weight: 600;
 }
 
-/* 4. images and paragraphs */
-.photos,
-main {
-  font-family: "Open Sans", sans-serif;
-  color: #000000;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+/* 4. images */
+.slidshow-container {
+  /* max-width: 1000px; */
+  /* display: flex; */
+  position: relative;
+}
+.slide {
+  /* width: 100%; */
+
+  text-align: center;
+  display: none;
+}
+.slide img {
   width: 60%;
 }
+.caption {
+  /* layout */
 
-/* 5. footer */
+  /* padding: 8px 12px; */
+  /* bottom: 8px; */
+
+  position: absolute;
+  left: 24%;
+  top: 100%;
+  width: 50%; /*shorter than img*/
+  padding: 10px;
+  text-align: center;
+
+  /* style */
+  font-family: "Open Sans", sans-serif;
+  color: red;
+  background-color: aqua;
+  /* color: #f2f2f2; */
+  font-size: 60%;
+  font-weight: 400;
+}
+
+#next,
+#prev {
+  /* annimation */
+  cursor: pointer;
+  transition: 0.6s ease;
+  user-select: none;
+
+  /* layout */
+  position: absolute;
+  top: 100%;
+
+  /* style */
+  color: red;
+  /* color: #f2f2f2; */
+  font-weight: 200;
+}
+#prev {
+  left: 22%;
+}
+#next {
+  /* layout */
+  right: 22%;
+}
+/* Background color when mouse on button */
+.prev:hover,
+.next:hover {
+  background-color: #000000;
+}
+
+.position {
+  color: red;
+  /* color: #f2f2f2; */
+  font-size: 50%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* 5. paragraph */
+main p {
+  /* style */
+  font-family: "Open Sans", sans-serif;
+  color: #000000;
+  font-size: 60%;
+  font-weight: 400;
+
+  /* layout */
+  display: block;
+  margin: auto;
+  width: 55%;
+  padding: 10px;
+}
+
+/* 6. footer */
 .flex-container {
   display: flex;
   flex-direction: row;
@@ -134,8 +178,14 @@ main {
   background-color: #c6d2da;
   font-size: 100;
 }
+
 .box > h3 {
   font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 .box {
@@ -144,58 +194,7 @@ main {
   padding: 10px;
 }
 
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-  padding-left: 0px;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+/* overall style */
+a {
+  text-decoration: none;
 }
