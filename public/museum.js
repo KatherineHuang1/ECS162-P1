@@ -1,6 +1,29 @@
 //Cite from https://www.w3schools.com/howto/howto_js_slideshow.asp
 console.log("initialization");
 
+// let finishTime = new Date("April 30, 2020 00:00:00");
+// let today = new Date();
+// console.log(finishTime - today);
+// document.getElementById("counter").innerHTML = finishTime - today / 1000;
+
+// setInterval(() => {
+//   today = new Date();
+//   document.getElementById("counter").innerHTML = finishTime - today / 1000;
+//   console.log(counter);
+// }, 1000);
+
+//=================count down=================
+let finishTime = new Date("April 30, 2020 00:00:00");
+let today = new Date();
+let counter = finishTime - today;
+document.getElementById("counter").innerHTML = counter.toLocaleString();
+
+setInterval(() => {
+  counter--;
+  document.getElementById("counter").innerHTML = counter.toLocaleString();
+}, 1000);
+
+//=================images container=================
 let slideIndex = 1;
 showSlides(slideIndex);
 

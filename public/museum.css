@@ -1,8 +1,20 @@
 /* 1. very top of the web */
+
+/* phone */
+@media (max-width: 600px) {
+  .top {
+    flex-direction: column;
+  }
+}
+/* desktop & tablet */
+@media (min-width: 600px) {
+  .top {
+    justify-content: space-between;
+  }
+}
 .top {
   /* layout */
   display: flex;
-  justify-content: space-between;
   padding: 20px;
 
   /* style */
@@ -21,8 +33,8 @@
   /* layout */
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
-
 .tabs a {
   /* style */
   color: #000000;
@@ -31,7 +43,19 @@
 }
 
 /* 2. TODO: heart beat counter? */
-.counter {
+/* phone */
+@media (max-width: 600px) {
+  #counter {
+    font-size: 200%;
+  }
+}
+/* desktop & tablet */
+@media (min-width: 600px) {
+  #counter {
+    font-size: 400%;
+  }
+}
+#counter {
   /* layout */
   /* TODO: display: flex; */
   margin: auto;
@@ -41,12 +65,40 @@
   /* style */
   background-color: #000000;
   color: #f2f2f2;
-  font-size: 400%;
   font-family: "Open Sans", sans-serif;
   font-weight: 500;
 }
 
 /* 3. title of the paragraph */
+/* phone */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 60%;
+  }
+  h2 {
+    font-size: 30%;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  h1 {
+    width: 80%;
+    font-size: 120%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+}
+/* desktop  */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 150%;
+  }
+  h2 {
+    font-size: 100%;
+  }
+}
+
 header {
   /* layout */
   text-align: center;
@@ -59,11 +111,9 @@ h1 {
   padding: 20px;
   /* style */
   font-weight: 600;
-  font-size: 150%;
 }
 h2 {
   /* style */
-  font-size: 120%;
   font-weight: 600;
 }
 
@@ -89,12 +139,10 @@ h2 {
   left: 24%;
   top: -50px;
   width: 50%; /*shorter than img*/
-  padding: 10px;
 
   /* style */
   font-family: "Open Sans", sans-serif;
-  color: red;
-  /* color: #f2f2f2; */
+  color: #f2f2f2;
   font-size: 60%;
   font-weight: 400;
 }
@@ -108,41 +156,51 @@ h2 {
 
   /* layout */
   position: absolute;
-  top: 100%;
+  top: 60%;
 
   /* style */
   color: red;
   /* color: #f2f2f2; */
   font-weight: 200;
+  padding: 10px;
 }
 #prev {
-  left: 22%;
+  left: 20%;
 }
 #next {
   /* layout */
-  right: 22%;
+  right: 20%;
 }
 /* Background color when mouse on button */
-.prev:hover,
-.next:hover {
-  background-color: #000000;
+#prev:hover,
+#next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .position {
-  color: red;
-  /* color: #f2f2f2; */
+  /* layout */
+  position: relative;
+  right: 27%;
+  top: 20px;
+  z-index: 10;
+  /* style */
+  color: #f2f2f2;
   font-size: 50%;
 }
 
 .dot {
   cursor: pointer;
   height: 15px;
-  width: 15px;
-  margin: 0 2px;
+  width: 12px;
+  margin: 0 1px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
+}
+
+.navigator {
+  text-align: center;
 }
 
 .active,
@@ -150,7 +208,53 @@ h2 {
   background-color: #717171;
 }
 
+/* Fading animation when switching pic */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* 5. paragraph */
+/* phone */
+@media (max-width: 600px) {
+  main p {
+    width: 100%;
+    margin: 0;
+  }
+}
+/* tablet */
+@media (max-width: 768px) {
+  main p {
+    width: 80%;
+  }
+}
+/* desktop  */
+@media (min-width: 768px) {
+  main p {
+    width: 58%;
+  }
+}
+
 main p {
   /* style */
   font-family: "Open Sans", sans-serif;
@@ -161,21 +265,40 @@ main p {
   /* layout */
   display: block;
   margin: auto;
-  width: 50%;
   padding: 10px;
+  line-height: 120%;
+  /* background-color: #2a2d7c; */
 }
 
 /* 6. footer */
-.flex-container {
-  display: flex;
-  flex-direction: row;
-  font-family: "Montserrat", sans-serif;
-  background-color: #c6d2da;
-  font-size: 100;
+/* phone */
+@media (max-width: 600px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Montserrat", sans-serif;
+    background-color: #c6d2da;
+  }
+  .box > h3 {
+    font-weight: 600;
+    font-size: 100%;
+    /* background-color: #2a2d7c; */
+  }
 }
+/* desktop & tablet */
+@media (min-width: 600px) {
+  .flex-container {
+    display: flex;
+    flex-direction: row;
+    font-family: "Montserrat", sans-serif;
+    background-color: #c6d2da;
+  }
 
-.box > h3 {
-  font-weight: bold;
+  .box > h3 {
+    font-weight: 600;
+    font-size: 100%;
+    /* background-color: #2a2d7c; */
+  }
 }
 
 ul {
@@ -185,8 +308,10 @@ ul {
 
 .box {
   /* text-align: left; */
-  margin: 5px;
   padding: 10px;
+  font-weight: 300;
+  font-size: 60%;
+  line-height: normal; /*spacing between lines*/
 }
 
 /* overall style */
